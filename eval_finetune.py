@@ -90,6 +90,9 @@ for filename in filenames:
 
     wav, sr = torchaudio.load(wav_file)
 
+    if wav.shape[0] > 1:
+        wav = wav.mean(dim=0, keepdim=True)
+
     resample = T.Resample(sr, TARGET_SR)
     wav = resample(wav)
     melspec = transform(wav)
