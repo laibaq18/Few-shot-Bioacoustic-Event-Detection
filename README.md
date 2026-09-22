@@ -4,6 +4,9 @@ This repository trains a feature extractor using **Regularized Supervised Contra
 
 [Problem Statement](https://dcase.community/challenge2023/task-few-shot-bioacoustic-event-detection)
 
+> 📄 Full write-up: [`Project-Report.pdf`](assets/Few_shot.pdf) — literature review, methodology, results 
+> Group project — with **Hadi Bazzi** and **Aqsa Mohsin** - for Data Science and Artificial Intelligence (WiSe 2025/26), University of Hamburg
+
 ---
 ### 1) Initial Setup
 
