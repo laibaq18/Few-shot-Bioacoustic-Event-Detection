@@ -92,12 +92,6 @@ For example (Evaluation on Best model with Validation Set):
   1. Update `valdir` in `args.py` to point to the **Evaluation set** directory.
   2. Reduce the fine-tuning batch size (--ftbs) from **32 -> 8**, since Evaluation files are larger and may cause **OOM (out-of-memory)** errors.
   3. Don't finetune on the Evaluation Set **(set --ft = 0)**
-  4. Since some wav files in the Eval set are not mono-channel, it can give an error. To mitigate that, please insert this block in the file:
-  ```
-  between lines 91 and 93 in eval_finetune.py:
-    if wav.shape[0] > 1:
-        wav = wav.mean(dim=0, keepdim=True)
-  ```
 
 - If running `eval_finetune` on the Evaluation set takes too long, a pre-generated predictions CSV is already available on the server:
   - `/data/msc-proj/outputs/eval_Evaluation_Set_DSAI_2025_2026_no_finetuning.csv`
